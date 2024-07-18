@@ -1,0 +1,158 @@
+{
+  "jobs": [
+    {
+      "type": "Full-Time",
+      "title": "Senior Vue Dev",
+      "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as Vue or Angular.",
+      "salary": "$175K - $200K",
+      "location": "Boston, MA",
+      "company": {
+        "name": "NewTek Solutions",
+        "description": "NewTek Solutions is a leading technology company specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.",
+        "contactEmail": "contact@teksolutions.com",
+        "contactPhone": "555-555-5555"
+      },
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Front-End Engineer (Vue)",
+      "type": "Full-Time",
+      "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
+      "location": "Miami, FL",
+      "salary": "$70K - $80K",
+      "company": {
+        "name": "Veneer Solutions",
+        "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
+        "contactEmail": "contact@loremipsum.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "type": "Part-Time",
+      "title": "Vue Front-End Developer edited",
+      "description": "Join our team as a Part-Time Front-End Developer in beautiful Pheonix, AZ. We are looking for a self-motivated individual with a passion for creating engaging user experiences. This position offers flexible hours and the opportunity to work remotely.",
+      "salary": "$60K - $70K",
+      "location": "Pheonix, AZ",
+      "company": {
+        "name": "Alpha Elite",
+        "description": "Alpha Elite is a dynamic startup specializing in digital marketing and web development. We are committed to fostering a diverse and inclusive workplace where creativity and innovation thrive.",
+        "contactEmail": "contact@adipisicingelit.com",
+        "contactPhone": "555-555-5555"
+      },
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "title": "Full Stack Vue Developer",
+      "type": "Full-Time",
+      "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
+      "location": "Atlanta, GA",
+      "salary": "$90K - $100K",
+      "company": {
+        "name": "Browning Technologies",
+        "description": "Browning Technologies is a rapidly growing technology company specializing in e-commerce solutions. We offer a dynamic and collaborative work environment where employees are encouraged to think creatively and innovate.",
+        "contactEmail": "contact@consecteturadipisicing.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "02fb",
+      "type": "Internship",
+      "title": "Kessie Armstrong",
+      "description": "Voluptatem Minus nu",
+      "salary": "$90K - $100K",
+      "location": "In iusto expedita ma",
+      "company": {
+        "name": "Bond Watson Co",
+        "description": "Distinctio Molestia",
+        "contactEmail": "nutivas@mailinator.com",
+        "contactPhone": "+1 (189) 317-8018"
+      }
+    },
+    {
+      "id": "0b09",
+      "type": "Remote",
+      "title": "Avram Rasmussen",
+      "description": "Eiusmod facilis aliq",
+      "salary": "$150K - $175K",
+      "location": "Consequatur qui ven",
+      "company": {
+        "name": "Robles and Holman Trading",
+        "description": "Ut laboriosam ab ul",
+        "contactEmail": "nirequpe@mailinator.com",
+        "contactPhone": "+1 (706) 536-2252"
+      }
+    },
+    {
+      "id": "4e83",
+      "type": "Remote",
+      "title": "Avram Rasmussen",
+      "description": "Eiusmod facilis aliq",
+      "salary": "$150K - $175K",
+      "location": "Consequatur qui ven",
+      "company": {
+        "name": "Robles and Holman Trading",
+        "description": "Ut laboriosam ab ul",
+        "contactEmail": "nirequpe@mailinator.com",
+        "contactPhone": "+1 (706) 536-2252"
+      }
+    },
+    {
+      "id": "1ef3",
+      "type": "Part-Time",
+      "title": "Emma Cantu",
+      "description": "Itaque itaque repreh",
+      "salary": "$175K - $200K",
+      "location": "Voluptates rem odio ",
+      "company": {
+        "name": "Mayer Vance LLC",
+        "description": "Sunt aspernatur ali",
+        "contactEmail": "fixurygo@mailinator.com",
+        "contactPhone": "+1 (226) 519-5584"
+      }
+    },
+    {
+      "id": "531e",
+      "type": "Part-Time",
+      "title": "Anastasia Mann",
+      "description": "Itaque vitae magnam ",
+      "salary": "Over $200K",
+      "location": "Neque esse cupidita",
+      "company": {
+        "name": "Mcbride and Burks LLC",
+        "description": "Eu dolor omnis nihil",
+        "contactEmail": "dehoxe@mailinator.com",
+        "contactPhone": "+1 (304) 715-4782"
+      }
+    },
+    {
+      "id": "d0aa",
+      "type": "Internship",
+      "title": "Minerva Glenn",
+      "description": "Officia a voluptatum",
+      "salary": "$100K - $125K",
+      "location": "Deserunt veritatis a",
+      "company": {
+        "name": "Coffey and Hatfield Inc",
+        "description": "Ipsa labore quis es",
+        "contactEmail": "duzaloxow@mailinator.com",
+        "contactPhone": "+1 (843) 301-4079"
+      }
+    },
+    {
+      "id": "155a",
+      "type": "Full-Time",
+      "title": "Lewis Roman",
+      "description": "Numquam delectus po",
+      "salary": "Under $50K",
+      "location": "Unde error minim mol",
+      "company": {
+        "name": "Mcdonald and Solis Inc",
+        "description": "Magni reprehenderit",
+        "contactEmail": "woqynyd@mailinator.com",
+        "contactPhone": "+1 (293) 382-6707"
+      }
+    }
+  ]
+}
