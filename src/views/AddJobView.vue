@@ -36,6 +36,7 @@ const { mutate } = useAddJob()
 const onSubmit = handleSubmit(async () => {
   mutate(values, {
     onSuccess: (response) => {
+      console.log({ response })
       toast.success('Job added successfully')
       router.push(`/jobs/${response.id}`)
     },

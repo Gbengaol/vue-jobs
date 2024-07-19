@@ -10,6 +10,7 @@ This template is an improvement to the amazing tutorial done by [Brad Traversy](
 4. Added [@tanstack/vue-query](https://tanstack.com/query/latest/docs/framework/vue/overview) for server state management
 5. Added [vee-validate](https://vee-validate.logaretm.com/v4/) for form validation
 6. Added [zod](https://zod.dev/) for schema validation
+7. Replaced json-server with supabase.
 
 ## Recommended IDE Setup
 
@@ -25,9 +26,15 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
+1.
+
 ```sh
 npm install
 ```
+
+2. Add a `.env` file to the root of your project and copy content from `.env.example` file into the new `.env` file.
+3. Log into your supabase account (or create one if you dont have) and create a new project. In your new project, create a new `jobs` table.
+4. Grab credentials from Supabase and populate your newly created `.env` file with the credentials.
 
 ### Compile and Hot-Reload for Development
 

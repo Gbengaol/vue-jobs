@@ -1,30 +1,30 @@
+import { supabase } from '@/lib/supabaseClient'
 import type { Job } from '@/utils/types/job.type'
 import { useMutation, useQuery } from '@tanstack/vue-query'
-import axios from 'axios'
-import { computed, type ComputedRef } from 'vue'
+import { type ComputedRef } from 'vue'
 
 const getJobs = async (): Promise<Job[]> => {
-  const response = await axios.get('/api/jobs')
-  return response.data
+  const response = await supabase.from('jobs').select('*')
+  return response.data as Job[]
 }
 
 const getJob = async (jobId: string): Promise<Job> => {
-  const response = await axios.get(`/api/jobs/${jobId}`)
-  return response.data
+  const response = await supabase.from('jobs').select('*').eq('id', jobId).returns()
+  return response.data?.[0] as Job
 }
 
 const addJob = async (formData: object): Promise<Job> => {
-  const response = await axios.post('/api/jobs', formData)
-  return response.data
+  const response = await supabase.from('jobs').insert(formData).select('*')
+  return response.data?.[0] as Job
 }
 
 const editJob = async ({ formData, jobId }: { formData: object; jobId: string }): Promise<Job> => {
-  const response = await axios.put(`/api/jobs/${jobId}`, formData)
-  return response.data
+  const response = await supabase.from('jobs').update(formData).eq('id', jobId).select('*')
+  return response.data?.[0] as Job
 }
 
 const deleteJob = async (jobId: string) => {
-  return await axios.delete(`/api/jobs/${jobId}`)
+  return await supabase.from('jobs').delete().eq('id', jobId)
 }
 
 const useJobs = () => {
