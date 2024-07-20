@@ -3,8 +3,6 @@ import 'primeicons/primeicons.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import Toast from 'vue-toastification'
-import 'vue-toastification/dist/index.css'
 import { MutationCache, QueryCache, QueryClient, VueQueryPlugin } from '@tanstack/vue-query'
 
 import App from './App.vue'
@@ -14,7 +12,6 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(Toast)
 
 export const queryClient = new QueryClient({
   queryCache: new QueryCache({

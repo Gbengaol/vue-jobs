@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import router from '@/router'
-import { useToast } from 'vue-toastification'
 import { useAddJob } from '@/hooks/api-hooks/use-jobs'
 import { useField, useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
@@ -8,6 +7,7 @@ import TextInput from '@/components/TextInput.vue'
 import TextArea from '@/components/TextArea.vue'
 import { AddJobSchema } from '@/utils/schemas/add-job-schema'
 import SelectOption from '@/components/SelectOption.vue'
+import { handleAlert } from '@/utils/alert'
 
 const { errors, values, handleSubmit, defineField } = useForm({
   validationSchema: toTypedSchema(AddJobSchema)
@@ -30,18 +30,21 @@ defineField('company.description')
 defineField('company.contactEmail')
 defineField('company.contactPhone')
 
-const toast = useToast()
 const { mutate } = useAddJob()
 
 const onSubmit = handleSubmit(async () => {
   mutate(values, {
     onSuccess: (response) => {
-      console.log({ response })
-      toast.success('Job added successfully')
+      handleAlert({
+        message: 'Job added successfully',
+        type: 'success'
+      })
       router.push(`/jobs/${response.id}`)
     },
     onError: (error) => {
-      toast.error('Job was not added')
+      handleAlert({
+        message: 'Job was not added'
+      })
       console.error('Error adding job', error)
     }
   })

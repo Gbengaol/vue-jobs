@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useToast } from 'vue-toastification'
 import { useEditJob, useJob } from '@/hooks/api-hooks/use-jobs'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useField, useForm } from 'vee-validate'
@@ -10,6 +9,7 @@ import TextInput from '@/components/TextInput.vue'
 import TextArea from '@/components/TextArea.vue'
 import { AddJobSchema } from '@/utils/schemas/add-job-schema'
 import SelectOption from '@/components/SelectOption.vue'
+import { handleAlert } from '@/utils/alert'
 
 const route = useRoute()
 const router = useRouter()
@@ -59,8 +59,6 @@ watch(
   { immediate: true }
 )
 
-const toast = useToast()
-
 const { updateFavorite } = useFavoritesStore()
 const { mutate } = useEditJob()
 const onSubmit = handleSubmit(async () => {
@@ -72,11 +70,16 @@ const onSubmit = handleSubmit(async () => {
     {
       onSuccess: (response) => {
         updateFavorite(response)
-        toast.success('Job updated successfully')
+        handleAlert({
+          message: 'Job updated successfully',
+          type: 'success'
+        })
         router.push(`/jobs/${response.id}`)
       },
       onError: (error) => {
-        toast.error('Job was not updated')
+        handleAlert({
+          message: 'Job was not updated'
+        })
         console.error('Error updating job', error)
       }
     }
@@ -89,7 +92,7 @@ const onSubmit = handleSubmit(async () => {
     <div class="container m-auto max-w-2xl py-24">
       <div class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
         <form @submit.prevent="onSubmit" novalidate>
-          <h2 class="text-3xl text-center font-semibold mb-6">Add Job</h2>
+          <h2 class="text-3xl text-center font-semibold mb-6">Edit Job</h2>
           <SelectOption label="Job Type" v-model="type" name="type" :error="errors.type">
             <option value="Full-Time">Full-Time</option>
             <option value="Part-Time">Part-Time</option>

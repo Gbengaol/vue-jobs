@@ -2,17 +2,16 @@
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 import BackButton from '@/components/BackButton.vue'
 import { useRoute, RouterLink, useRouter } from 'vue-router'
-import { useToast } from 'vue-toastification'
 import { useDeleteJob, useJob } from '@/hooks/api-hooks/use-jobs'
 import { useFavoritesStore } from '@/stores/favorites'
 import { computed } from 'vue'
+import { handleAlert } from '@/utils/alert'
 
 const route = useRoute()
 const jobId = computed(() => route.params.id as string)
 
 const { data: job, isLoading } = useJob(jobId)
 
-const toast = useToast()
 const router = useRouter()
 
 const { removeFromFavorites } = useFavoritesStore()
@@ -23,11 +22,16 @@ const deleteJob = async () => {
     mutate(jobId.value, {
       onSuccess: () => {
         removeFromFavorites(jobId.value)
-        toast.success('Job deleted successfully')
+        handleAlert({
+          message: 'Job deleted successfully',
+          type: 'success'
+        })
         router.push('/jobs')
       },
       onError: (error) => {
-        toast.error('Job was not deleted')
+        handleAlert({
+          message: 'Job was not deleted'
+        })
         console.error('Error deleting job', error)
       }
     })
